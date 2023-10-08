@@ -12,7 +12,10 @@ class App extends Component {
           <h2 className="text-center" >Today's Plan</h2>
           <div className="row">
             <div className="col-9">
-              <input type="text" className='form-control' name="" id="" />
+              <input type="text" className='form-control' name="" id="" placeholder='Write Plan Here' />
+            </div>
+            <div className="col-2">
+              <button className='btn btn-warning px-5 fw-bold' >Add</button>
             </div>
           </div>
           </div>
