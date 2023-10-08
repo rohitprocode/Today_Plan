@@ -23,8 +23,17 @@ class App extends Component {
       })
      }
     }
-    handleDelete = e =>{
-      alert("Hii")
+    handleDelete = id =>{
+      console.log("Deleted",id);
+      const Olditems = [...this.state.items]
+      console.log("Olditems")
+      const items = Olditems.filter((element,i)=>{
+        return i !== id
+      })
+      console.log("Newitems",items)
+      this.setState({
+        items:items
+      })
     }
   
   render() {
@@ -44,7 +53,7 @@ class App extends Component {
               <ul className="list-unstyled row m-5 ">
               {
                 this.state.items.map((value,index)=>{
-                  return <Plan key={index} value={value} sendData={this.handleDelete} />
+                  return <Plan key={index} id={index} value={value} sendData={this.handleDelete} />
                 })
               }
                 </ul>
