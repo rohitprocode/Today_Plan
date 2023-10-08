@@ -9,8 +9,12 @@ class App extends Component {
       <div className='container-fluid my-5' >
         <div className="row">
           <div className="col-sm-6 mx-auto text-white shadow-lg p-3">
-          <div className="text-center"><h1>Today's Plan</h1></div>
-
+          <h2 className="text-center" >Today's Plan</h2>
+          <div className="row">
+            <div className="col-9">
+              <input type="text" className='form-control' name="" id="" />
+            </div>
+          </div>
           </div>
         </div>
       </div>
