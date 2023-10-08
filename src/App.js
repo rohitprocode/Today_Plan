@@ -23,6 +23,9 @@ class App extends Component {
       })
      }
     }
+    handleDelete = e =>{
+      alert("Hii")
+    }
   
   render() {
     return (
@@ -39,8 +42,11 @@ class App extends Component {
             </div>
             <div className="container-fluid">
               <ul className="list-unstyled row m-5 ">
-                <Plan/>
-                {console.log(this.state.items)}
+              {
+                this.state.items.map((value,index)=>{
+                  return <Plan key={index} value={value} sendData={this.handleDelete} />
+                })
+              }
                 </ul>
             </div>
           </div>
