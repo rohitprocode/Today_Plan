@@ -5,3 +5,17 @@ html{
 .container-fluid{
   background-color: darkgoldenrod;
 }
+
+input[type="text"]{
+  background:transparent;
+}
+
+input[type="text"]::placeholder{
+  color: white;
+}
+
+input[type="text"]:focus{
+background: transparent;
+color:white;
+}
+
